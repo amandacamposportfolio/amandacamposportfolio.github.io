@@ -267,6 +267,35 @@ footer .contact-item i {
         .project-link:hover {
             background-color: var(--medium-blue);
         }
+
+        .additional-files {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .download-link {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--light-lime);
+            color: var(--primary-blue);
+            padding: 0.4rem 0.8rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .download-link:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .download-link i {
+            margin-right: 0.3rem;
+        }
         
         /* Rodapé */
         footer {
@@ -524,11 +553,7 @@ footer .contact-item i {
             
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="revit">Revit</button>
                 <button class="filter-btn" data-filter="autocad">AutoCAD</button>
-                <button class="filter-btn" data-filter="civil3d">Civil 3D</button>
-                <button class="filter-btn" data-filter="sketchup">SketchUp</button>
-                <button class="filter-btn" data-filter="arcgis">ArcGIS</button>
                 <button class="filter-btn" data-filter="elpla">ELPLA</button>
             </div>
             
@@ -607,63 +632,60 @@ footer .contact-item i {
         const filterButtons = document.querySelectorAll('.filter-btn');
         const projectCardsContainer = document.querySelector('.projects-grid');
         
-        // Dados de exemplo para projetos
+        // Dados dos projetos baseados na estrutura do GitHub
         const projects = [
             { 
                 title: "Projeto Residencial Multifamiliar", 
-                category: "revit", 
-                description: "Projeto hidrossanitário de Água Fria e Água Quente de uma residência multifamiliar, com Y m², 18 pavimentos contendo 6 apartamentos de 2 quartos em cada, realizado durante a disciplina de Projeto de Instalações Hidrossanitárias, na UFRN.",
-                software: "Revit",
-                filePath: "projetos/revit/residencial_unifamiliar.pdf"
-            },
-            { 
-                title: "Projeto Residencial Unifamiliar", 
-                category: "revit", 
-                description: "Projeto hidrossanitário completo de uma residência unifamiliar com 3 quartos.",
-                software: "Revit",
-                filePath: "projetos/revit/residencial_unifamiliar.pdf"
-            },
-            { 
-                title: "Planta arquitetônica de uma residência", 
                 category: "autocad", 
-                description: "Planta arquitetônica de uma residencia, realizado durante a disciplina de Projeto Arquitetônico, na UFRN.",
+                description: "Projeto hidrossanitário de Água Fria e Água Quente de uma residência multifamiliar, com Y m², 18 pavimentos contendo 6 apartamentos de 2 quartos em cada, realizado durante a disciplina de Projeto de Instalações Hidrossanitárias, na UFRN.",
                 software: "AutoCAD",
-                filePath: "projetos/autocad/planta.pdf"
-            },
-            { 
-                title: "relatório e projeto geotécnico de fundação mista", 
-                category: "elpla", 
-                description: "Relatório e projeto de um sistema de fundação mista Radier-Estaqueado para um edifício de 20 andares, com 400 m², realizado durante a disciplina de Fundações, na UFRN.",
-                software: "ELPLA",
-                filePath: "projetos/elpla/fundações.pdf"
-            },
-            { 
-                title: "Projeto geométrico de uma estrada", 
-                category: "civil3d", 
-                description: "Projeto geométrico de uma estrada de 2 km de comprimento, realizado durante a disciplina de Estradas, na UFRN.",
-                software: "Civil 3D",
-                filePath: "projetos/civil3d/Estradas.pdf"
-            },
-            { 
-                title: "-", 
-                category: "arcgis", 
-                description: "-.",
-                software: "ArcGIS",
-                filePath: "projetos/arcgis/-.pdf"
-            },
-            { 
-                title: "Projeto Estrutural de uma escada", 
-                category: "revit", 
-                description: "Projeto estrutural completo de uma escada utilizando AutoCad, realizado durante a disciplina de Estruturas de Concreto Armado II, na UFRN.",
-                software: "Revit",
-                filePath: "projetos/revit/escada.pdf"
+                mainFile: "img/projetos/autocad/eletrico/PROJETO DE INSTALAÇÕES ELÉTRICAS.pdf",
+                additionalFiles: [
+                    {name: "Memorial Elétrico", path: "img/projetos/autocad/eletrico/MEMORIAL - PROJETO DE INSTALAÇÕES ELÉTRICAS.PDF"},
+                    {name: "Arquivo DWG", path: "img/projetos/autocad/eletrico/PROJETO DE INSTALAÇÕES ELÉTRICAS.dwg"}
+                ]
             },
             { 
                 title: "AsBuilt de um duplex", 
                 category: "autocad", 
                 description: "Projeto AsBuilt de uma residencia unifamiliar de dois andares, com X m²",
                 software: "AutoCAD",
-                filePath: "projetos/autocad/asbuilt.pdf"
+                mainFile: "img/projetos/autocad/asbuilt/AsBuilt.pdf",
+                additionalFiles: [
+                    {name: "Arquivo DWG", path: "img/projetos/autocad/asbuilt/AsBuilt.dwg"},
+                    {name: "Backup DWG", path: "img/projetos/autocad/asbuilt/AsBuilt.bak"}
+                ]
+            },
+            { 
+                title: "Planta arquitetônica de uma residência", 
+                category: "autocad", 
+                description: "Planta arquitetônica de uma residencia, realizado durante a disciplina de Projeto Arquitetônico, na UFRN.",
+                software: "AutoCAD",
+                mainFile: "#",
+                additionalFiles: [
+                    {name: "Arquivo DWG", path: "img/projetos/autocad/projeto arquitetonico/AV3 - Amanda Campos_T03.dwg"},
+                    {name: "Documentação", path: "img/projetos/autocad/projeto arquitetonico/Parte Escrita  - Amanda Campos - Turma 03.pdf"}
+                ]
+            },
+            { 
+                title: "Projeto Estrutural de uma escada", 
+                category: "autocad", 
+                description: "Projeto estrutural completo de uma escada utilizando AutoCad, realizado durante a disciplina de Estruturas de Concreto Armado II, na UFRN.",
+                software: "AutoCAD",
+                mainFile: "img/projetos/autocad/estrutural-escadas/Amanda Campos - Projeto de Escadas 2025-02.pdf",
+                additionalFiles: [
+                    {name: "Arquivo DWG", path: "img/projetos/autocad/estrutural-escadas/Cad - Amanda Campos - Projeto de Escadas 2025-02.dwg"}
+                ]
+            },
+            { 
+                title: "Relatório e projeto geotécnico de fundação mista", 
+                category: "elpla", 
+                description: "Relatório e projeto de um sistema de fundação mista Radier-Estaqueado para um edifício de 20 andares, com 400 m², realizado durante a disciplina de Fundações, na UFRN.",
+                software: "ELPLA",
+                mainFile: "img/projetos/elpla/Projeto de Radier-Estaqueado - Amanda Campos.pdf",
+                additionalFiles: [
+                    {name: "Resultados (ZIP)", path: "img/projetos/elpla/Resultados/", isFolder: true}
+                ]
             }
         ];
 
@@ -680,14 +702,39 @@ footer .contact-item i {
                 projectCard.className = 'project-card';
                 projectCard.setAttribute('data-category', project.category);
                 
+                let additionalFilesHTML = '';
+                if (project.additionalFiles && project.additionalFiles.length > 0) {
+                    additionalFilesHTML = '<div class="additional-files"><strong>Arquivos adicionais:</strong><br>';
+                    project.additionalFiles.forEach(file => {
+                        if (file.isFolder) {
+                            additionalFilesHTML += `
+                                <a href="${file.path}" class="download-link" download>
+                                    <i class="fas fa-folder"></i> ${file.name}
+                                </a>
+                            `;
+                        } else {
+                            additionalFilesHTML += `
+                                <a href="${file.path}" class="download-link" download>
+                                    <i class="fas fa-download"></i> ${file.name}
+                                </a>
+                            `;
+                        }
+                    });
+                    additionalFilesHTML += '</div>';
+                }
+                
                 projectCard.innerHTML = `
                     <div class="project-info">
                         <span class="project-category">${project.software}</span>
                         <h3>${project.title}</h3>
                         <p>${project.description}</p>
-                        <a href="${project.filePath}" class="project-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Ver Projeto
-                        </a>
+                        ${project.mainFile !== '#' ? 
+                            `<a href="${project.mainFile}" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Ver Projeto
+                            </a>` : 
+                            '<div class="project-link" style="background-color: #ccc; cursor: not-allowed;"><i class="fas fa-external-link-alt"></i> PDF não disponível</div>'
+                        }
+                        ${additionalFilesHTML}
                     </div>
                 `;
                 
@@ -722,32 +769,6 @@ footer .contact-item i {
 
         // Renderizar todos os projetos inicialmente
         renderProjects();
-
-        // Simulação de projetos do GitHub - em um cenário real, você carregaria os arquivos da pasta projetos/
-        // Esta função simula a leitura da estrutura de pastas
-        function loadProjectsFromStructure() {
-            // Em um cenário real, você faria uma requisição para o GitHub API
-            // ou carregaria um arquivo JSON com a estrutura dos projetos
-            console.log("Estrutura de pastas simulada:");
-            console.log("projetos/");
-            console.log("├── revit/");
-            console.log("│   ├── residencial_unifamiliar.pdf");
-            console.log("│   └── estrutural.pdf");
-            console.log("├── autocad/");
-            console.log("│   ├── planta_localizacao.pdf");
-            console.log("│   └── detalhe_cobertura.pdf");
-            console.log("├── civil3d/");
-            console.log("│   └── terraplenagem.pdf");
-            console.log("├── sketchup/");
-            console.log("│   └── modelagem_edificio.pdf");
-            console.log("├── arcgis/");
-            console.log("│   └── zoneamento.pdf");
-            console.log("└── elpla/");
-            console.log("    └── analise_solo.pdf");
-        }
-
-        // Carregar estrutura de projetos
-        loadProjectsFromStructure();
     </script>
 </body>
 </html>
