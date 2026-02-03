@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Amanda Campos - Engenheira Civil</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary-blue: #1a3d8b;
             --light-lime: #e2f443;
             --white: #FFFFFF;
-            --light-gray: #F5F5F5;
-            --dark-gray: #2d335c;
-            --medium-blue: #255fa6;
+            --light-gray: #f0f0f8;
+            --dark-gray: #bec9c8;
+            --medium-blue: #3A506B;
         }
         
         * {
@@ -133,6 +133,18 @@
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
             align-items: start;
+            position: relative;
+        }
+        
+        /* Linha vertical azul no meio */
+        .vertical-divider {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--primary-blue);
+            transform: translateX(-50%);
         }
         
         .contact-info {
@@ -415,14 +427,14 @@
             align-items: center;
             background-color: var(--light-lime);
             color: var(--primary-blue);
-            padding: 0.6rem 1.2rem; /* Mesmo padding do botão "  Ver Projeto" */
+            padding: 0.6rem 1.2rem; /* Mesmo padding do botão "Ver Projeto" */
             border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.85rem;
             transition: all 0.3s;
             white-space: nowrap;
-            height: 42px; /* Altura consistente com o botão "  Ver Projeto" */
+            height: 42px; /* Altura consistente com o botão "Ver Projeto" */
         }
 
         .download-link:hover {
@@ -492,6 +504,11 @@
         @media (max-width: 992px) {
             .about-content {
                 grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .vertical-divider {
+                display: none;
             }
         }
         
@@ -587,7 +604,7 @@
             
             /* Esconder elementos não necessários na impressão */
             header, nav, .mobile-menu-btn, .social-links, .print-btn, footer,
-            .projects-section, #projetos {
+            .projects-section, #projetos, .vertical-divider {
                 display: none !important;
             }
             
@@ -868,7 +885,7 @@
         <div class="container">
             <img src="img/eu/euzinha.jpeg" alt="Amanda Campos" class="profile-img" onerror="this.src='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80'">
             <h1>Amanda Campos</h1>
-            <p>Estudante de Engenharia Civil (10º semestre - UFRN) em busca de oportunidade de estágio para adquirir experiência prática na área de Projetos, Geotecnia, Planejamento ou Orçamento de Obras.</p>
+            <p>Estudante de Engenharia Civil (9º semestre - UFRN) em busca de oportunidade de estágio para adquirir experiência prática na área de Projetos, Geotecnia, Planejamento e Orçamento de Obras.</p>
             <div class="contact-info" style="max-width: 600px; margin: 0 auto;">
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
@@ -891,6 +908,9 @@
         <div class="container">
             <h2 class="section-title">Currículo</h2>
             <div class="about-content">
+                <!-- Linha vertical azul no meio -->
+                <div class="vertical-divider"></div>
+                
                 <div>
                     <h3>Formação Acadêmica</h3>
                     <p><strong>Bacharelado em Engenharia Civil</strong></p>
