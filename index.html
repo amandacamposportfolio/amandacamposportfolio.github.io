@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
---primary-blue: #1a3d8b;
- --light-lime: #f1faa1;
---white: #ffffff;
-            --light-gray: #dfe4e4;
-            --dark-gray: #1a3d8b;
-            --medium-blue: #9da8b5;
-        }
+:root {
+    --primary-blue: #1a3d8b;      /* Azul principal */
+    --light-blue: #2a4d9e;        /*Azul um pouco mais claro para divisões */
+    --medium-blue: #3a5da8;       /* Azul médio */
+    --light-lime: #b5d902;         /* Verde lima */
+    --white: #ffffff;               /* Branco */
+    --light-gray: #e8ebf0;          /* Cinza claro mais suave */
+}
         
         * {
             margin: 0;
@@ -103,7 +103,7 @@
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--medium-blue) 100%);
             color: var(--white);
             padding: 5rem 0;
-            text-align: justify;
+            text-align: center;
         }
         
         .hero h1 {
@@ -136,42 +136,42 @@
         }
         
         /* Linha vertical azul no meio */
-        .vertical-divider {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background-color: var(--primary-blue);
-            transform: translateX(-50%);
-        }
+.vertical-divider {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--light-blue);
+    transform: translateX(-50%);
+}
         
-        .contact-info {
-            background-color: var(--medium-blue);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
+.contact-info {
+    background-color: var(--light-blue);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
 
         /* Hero section contact info */
-        .hero .contact-info {
-            background-color: rgba(255, 255, 255, 0.15); /* Fundo semi-transparente branco */
-            color: var(--white); /* Texto branco */
-            border: 1px solid rgba(255, 255, 255, 0.3); /* Borda sutil */
-        }
+.hero .contact-info {
+    background-color: rgba(42, 77, 158, 0.2);
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
 
         .hero .contact-item i {
-            color: var(--light-lime); /* Ícones em verde lima */
+            color: var(--light-lime);
         }
 
-        /* Para o rodapé */
-        footer .contact-info {
-            background-color: var(--medium-blue); /* Azul médio */
-            color: var(--white);
-        }
+footer .contact-info {
+    background-color: var(--light-blue);
+    color: var(--white);
+}
 
         footer .contact-item i {
-            color: var(--light-lime); /* Ícones em verde lima */
+            color: var(--light-lime);
         }
         
         .contact-item {
@@ -180,12 +180,12 @@
             margin-bottom: 1.2rem;
         }
         
-        .contact-item i {
-            color: var(--primary-blue);
-            margin-right: 1rem;
-            font-size: 1.2rem;
-            width: 24px;
-        }
+.contact-item i {
+    color: var(--light-blue);
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    width: 24px;
+}
         
         .software-list {
             display: flex;
@@ -208,11 +208,12 @@
             margin: 2rem 0;
         }
         
-        .course-item {
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--primary-blue);
-        }
+.course-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--light-blue);
+}
+
         
         .course-item:last-child {
             border-bottom: none;
@@ -250,11 +251,11 @@
             font-size: 0.9rem;
         }
         
-        .course-detail i {
-            color: var(--primary-blue);
-            font-size: 0.9rem;
-            width: 16px;
-        }
+.course-detail i {
+    color: var(--light-blue);
+    font-size: 0.9rem;
+    width: 16px;
+}
         
         .course-note {
             display: inline-flex;
@@ -282,9 +283,9 @@
             transition: background-color 0.3s;
         }
         
-        .course-link:hover {
-            background-color: var(--medium-blue);
-        }
+.course-link:hover {
+    background-color: var(--medium-blue);
+}
         
         .areas-of-interest {
             margin-top: 2.5rem;
@@ -309,15 +310,15 @@
             padding-left: 1.5rem;
         }
         
-        .areas-list li:before {
-            content: "•";
-            color: var(--primary-blue);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
+.areas-list li:before {
+    content: "•";
+    color: var(--light-blue);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
         
-        /* Projetos */
+        /* Projetos - Cards sem botões */
         .projects-section {
             background-color: var(--light-gray);
         }
@@ -340,10 +341,10 @@
             transition: all 0.3s;
         }
         
-        .filter-btn:hover, .filter-btn.active {
-            background-color: var(--primary-blue);
-            color: var(--white);
-        }
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--light-blue);
+    color: var(--white);
+}
         
         .projects-grid {
             display: grid;
@@ -357,10 +358,12 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s;
+            cursor: pointer;
         }
         
         .project-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
         
         .project-info {
@@ -377,72 +380,154 @@
             margin-bottom: 1rem;
         }
         
-        .project-link {
-            display: inline-flex;
+        /* Modal de Arquivos do Projeto */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: auto;
+        }
+        
+        .modal-content {
+            background-color: var(--white);
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 900px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: modalFadeIn 0.3s;
+        }
+        
+        @keyframes modalFadeIn {
+            from {opacity: 0; transform: translateY(-30px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--light-lime);
+        }
+        
+        .modal-header h2 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+        }
+        
+        .close-modal {
+            color: var(--primary-blue);
+            font-size: 2.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+            line-height: 1;
+        }
+        
+        .close-modal:hover {
+            color: var(--medium-blue);
+        }
+        
+        .modal-project-description {
+            background-color: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        .modal-project-description h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .modal-project-description p {
+            color: var(--dark-gray);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .files-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+.file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    border-left: 5px solid var(--light-blue); /* Mudar de --primary-blue para --light-blue */
+}
+        
+        .file-item:hover {
+            background-color: #d0d5d5;
+        }
+        
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex: 1;
+        }
+        
+.file-icon {
+    color: var(--light-blue);
+    font-size: 1.5rem;
+    width: 40px;
+    text-align: center;
+}
+        
+        .file-details {
+            flex: 1;
+        }
+        
+.file-name {
+    font-weight: 600;
+    color: var(--light-blue);
+    margin-bottom: 0.2rem;
+    font-size: 1.1rem;
+}
+        
+        .file-description {
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+        }
+        
+        .file-download {
             background-color: var(--primary-blue);
             color: var(--white);
             padding: 0.6rem 1.2rem;
             border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
-            transition: background-color 0.3s;
-        }
-        
-        .project-link:hover {
-            background-color: var(--medium-blue);
-        }
-
-        /* Botões alinhados horizontalmente */
-        .project-actions {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .additional-files {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .additional-files strong {
-            color: var(--primary-blue);
             font-size: 0.9rem;
-            white-space: nowrap;
-        }
-
-        .download-links-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .download-link {
+            transition: background-color 0.3s;
             display: inline-flex;
             align-items: center;
-            background-color: var(--light-lime);
-            color: var(--primary-blue);
-            padding: 0.6rem 1.2rem; /* Mesmo padding do botão "  Ver Projeto" */
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: all 0.3s;
+            gap: 0.5rem;
             white-space: nowrap;
-            height: 42px; /* Altura consistente com o botão "  Ver Projeto" */
         }
-
-        .download-link:hover {
-            background-color: var(--primary-blue);
-            color: var(--white);
+        
+        .file-download:hover {
+            background-color: var(--medium-blue);
         }
-
-        .download-link i {
-            margin-right: 0.5rem;
+        
+        .file-download i {
+            font-size: 0.9rem;
         }
         
         /* Rodapé */
@@ -541,17 +626,25 @@
             .mobile-menu-btn {
                 display: block;
             }
-
-            .project-actions {
+            
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+                padding: 1.5rem;
+            }
+            
+            .modal-header h2 {
+                font-size: 1.5rem;
+            }
+            
+            .file-item {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 1rem;
             }
-
-            .additional-files {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
+            
+            .file-download {
+                align-self: flex-end;
             }
             
             .course-details {
@@ -562,11 +655,6 @@
         @media (max-width: 480px) {
             .projects-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .download-link {
-                font-size: 0.75rem;
-                padding: 0.6rem 0.8rem;
             }
         }
         
@@ -585,19 +673,15 @@
                 max-width: 100%;
             }
             
-           
-            /* Esconder elementos não necessários na impressão */
             header, nav, .mobile-menu-btn, .social-links, .print-btn, footer,
-            .projects-section, #projetos, .vertical-divider {
+            .projects-section, #projetos, .vertical-divider, .modal {
                 display: none !important;
             }
             
-            /* Esconder botões de filtro */
             .filter-buttons {
                 display: none !important;
             }
             
-            /* Ajustar layout para impressão */
             .hero {
                 padding: 1rem 0;
                 background: none;
@@ -632,7 +716,6 @@
                 page-break-inside: avoid;
             }
             
-            /* Ajustar conteúdo do currículo para impressão */
             #sobre {
                 padding: 0;
                 margin: 0;
@@ -652,7 +735,6 @@
                 page-break-inside: avoid;
             }
             
-            /* Mostrar cursos na impressão */
             .courses-list {
                 margin: 1.5rem 0;
                 display: block !important;
@@ -715,19 +797,20 @@
                 align-items: center;
             }
             
-            .course-link {
-                background-color: #fff;
-                color: #000;
-                border: 1px solid #000;
-                padding: 0.4rem 0.8rem;
-                font-size: 10pt;
-                display: inline-flex;
-                align-items: center;
-                text-decoration: none;
-                margin-top: 0.5rem;
-            }
+.course-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--light-blue);
+    color: var(--white);
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
             
-            /* Áreas de interesse na impressão */
             .areas-of-interest {
                 background-color: #f0f0f0;
                 border: 1px solid #ddd;
@@ -763,7 +846,6 @@
                 left: 0;
             }
             
-            /* Softwares na impressão */
             .software-list {
                 margin: 0.5rem 0 1.5rem 0;
             }
@@ -778,7 +860,6 @@
                 margin: 0.2rem;
             }
             
-            /* Informações de contato na impressão */
             .hero .contact-info {
                 background-color: #f0f0f0;
                 color: #000;
@@ -801,7 +882,6 @@
                 font-size: 11pt;
             }
             
-            /* Melhorar legibilidade do texto */
             p, li, span, h3, h4 {
                 color: #333;
             }
@@ -821,27 +901,19 @@
                 margin-bottom: 1rem;
             }
             
-            /* Links em preto para impressão */
             a {
                 color: #000 !important;
                 text-decoration: underline;
             }
             
-            /* Garantir que não haja quebras indesejadas */
             .course-item, .areas-of-interest, .software-list {
                 page-break-inside: avoid;
                 break-inside: avoid;
             }
             
-            /* Remover sombras e efeitos visuais */
             .course-item, .areas-of-interest, .software-chip, .contact-info {
                 box-shadow: none !important;
             }
-        }
-        
-        /* Classe para lista de arquivos (inicialmente oculta) */
-        .project-files-list {
-            display: none;
         }
     </style>
 </head>
@@ -901,8 +973,20 @@
                     <p>Universidade Federal do Rio Grande do Norte (UFRN), Natal/RN</p>
                     <p>Conclusão prevista: 2027</p>
                     
+                    <!-- NOVA: Experiência Profissional -->
+                    <h3 style="margin-top: 2rem;">Experiência Profissional</h3>
+                    <div style="margin-bottom: 2rem;">
+                        <p><strong>Estagiária de Engenharia Civil</strong></p>
+                        <p>Linhares e Rebouças - Natal/RN</p>
+                        <p style="display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0;">
+                            <i class="fas fa-calendar-alt" style="color: var(--primary-blue);"></i>
+                            <span>2026 - Atual</span>
+                        </p>
+                        <p>Atuando em projetos de engenharia, com foco em planejamento, orçamento e acompanhamento de obras. Auxílio na elaboração de orçamentos, cronogramas físicos-financeiros e compatibilização de projetos.</p>
+                    </div>
+                    
                     <h3 style="margin-top: 2rem;">Resumo Profissional</h3>
-                    <p>Estudante de Engenharia Civil (10º semestre - UFRN) em busca de oportunidade de estágio para adquirir experiência prática. Tenho interesse na área de Projetos, Geotecnia, Planejamento ou Orçamento de Obras.</p>
+                    <p>Estudante de Engenharia Civil (10º semestre - UFRN) com experiência em estágio na Linhares e Rebouças, atuando em planejamento, orçamento e acompanhamento de obras. Busco oportunidade para continuar adquirindo experiência prática nas áreas de Projetos, Geotecnia, Planejamento ou Orçamento de Obras.</p>
                     
                     <!-- Seção Cursos Complementares -->
                     <div class="courses-list">
@@ -1036,10 +1120,11 @@
         </div>
     </section>
 
-    <!-- Seção Projetos (NÃO aparece na impressão) -->
+    <!-- Seção Projetos -->
     <section class="projects-section" id="projetos">
         <div class="container">
             <h2 class="section-title">Projetos</h2>
+            <p style="margin-bottom: 2rem; text-align: center;">Clique em qualquer card para ver os detalhes e arquivos do projeto</p>
             
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">Todos</button>
@@ -1047,11 +1132,27 @@
                 <button class="filter-btn" data-filter="elpla">ELPLA</button>
             </div>
             
-            <div class="projects-grid">
+            <div class="projects-grid" id="projects-grid">
                 <!-- Projetos serão carregados dinamicamente via JavaScript -->
             </div>
         </div>
     </section>
+
+    <!-- Modal de Arquivos do Projeto -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Projeto</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div id="modal-description" class="modal-project-description">
+                <!-- Descrição do projeto será inserida aqui -->
+            </div>
+            <div class="files-list" id="modal-files">
+                <!-- Lista de arquivos será inserida aqui -->
+            </div>
+        </div>
+    </div>
 
     <!-- Rodapé -->
     <footer id="contato">
@@ -1120,7 +1221,7 @@
 
         // Filtro de projetos
         const filterButtons = document.querySelectorAll('.filter-btn');
-        const projectCardsContainer = document.querySelector('.projects-grid');
+        const projectCardsContainer = document.getElementById('projects-grid');
         
         // Dados dos projetos baseados na estrutura do GitHub
         const projects = [
@@ -1129,10 +1230,10 @@
                 category: "autocad", 
                 description: "Projeto elétrico completo de uma residência unifamiliar desenvolvido para a disciplina de Eletrotécnica Básica, na UFRN. Inclui o dimensionamento de circuitos de iluminação e força (TUGs e TUEs), quadro de medição de 70 A, diagramas unifilares e legenda padronizada de símbolos conforme as normas da Cosern.",
                 software: "AutoCAD",
-                mainFile: "img/projetos/autocad/eletrico/PROJETO DE INSTALAÇÕES ELÉTRICAS.pdf",
-                additionalFiles: [
-                    {name: "Memorial Elétrico", path: "img/projetos/autocad/eletrico/MEMORIAL - PROJETO DE INSTALAÇÕES ELÉTRICAS.PDF"},
-                    {name: "Arquivo DWG", path: "img/projetos/autocad/eletrico/PROJETO DE INSTALAÇÕES ELÉTRICAS.dwg"}
+                files: [
+                    {name: "Projeto de Instalações Elétricas", path: "img/projetos/autocad/eletrico/PROJETO DE INSTALAÇÕES ELÉTRICAS.pdf", description: "Planta baixa com circuitos elétricos, diagrama unifilar e quadro de cargas.", icon: "fa-file-pdf"},
+                    {name: "Memorial Elétrico", path: "img/projetos/autocad/eletrico/MEMORIAL - PROJETO DE INSTALAÇÕES ELÉTRICAS.PDF", description: "Memorial descritivo e de cálculo do projeto elétrico.", icon: "fa-file-pdf"},
+                    {name: "Arquivo DWG", path: "img/projetos/autocad/eletrico/PROJETO DE INSTALAÇÕES ELÉTRICAS.dwg", description: "Arquivo original do AutoCAD para edição.", icon: "fa-file"}
                 ]
             },
             { 
@@ -1140,10 +1241,10 @@
                 category: "autocad", 
                 description: "Projeto no formato As Built (como construído) de um imóvel residencial de dois pavimentos. Contém plantas baixas detalhadas do térreo e primeiro andar na escala 1:50, além da planta de situação, apresentando as dimensões reais e a locação exata da edificação no terreno.",
                 software: "AutoCAD",
-                mainFile: "img/projetos/autocad/asbuilt/AsBuilt.pdf",
-                additionalFiles: [
-                    {name: "Arquivo DWG", path: "img/projetos/autocad/asbuilt/AsBuilt.dwg"},
-                    {name: "Backup DWG", path: "img/projetos/autocad/asbuilt/AsBuilt.bak"}
+                files: [
+                    {name: "As Built", path: "img/projetos/autocad/asbuilt/AsBuilt.pdf", description: "Planta As Built completa em PDF.", icon: "fa-file-pdf"},
+                    {name: "Arquivo DWG", path: "img/projetos/autocad/asbuilt/AsBuilt.dwg", description: "Arquivo DWG para edição.", icon: "fa-file"},
+                    {name: "Backup DWG", path: "img/projetos/autocad/asbuilt/AsBuilt.bak", description: "Arquivo de backup do AutoCAD.", icon: "fa-file"}
                 ]
             },
             { 
@@ -1151,9 +1252,9 @@
                 category: "autocad", 
                 description: "Documentação escrita e planejamento arquitetônico para uma residência unifamiliar, criada durante a disciplina de Projeto Arquitetônico, na UFRN. Define o programa de necessidades (setores social, íntimo e serviço), quadros de ventilação, dimensionamento de reservatórios de água e memorial descritivo focado no conforto e funcionalidade.",
                 software: "AutoCAD",
-                mainFile: "img/projetos/autocad/projeto arquitetonico/Parte Escrita  - Amanda Campos - Turma 03.pdf",
-                additionalFiles: [
-                    {name: "Arquivo DWG", path: "img/projetos/autocad/projeto arquitetonico/AV3 - Amanda Campos_T03.dwg"},
+                files: [
+                    {name: "Parte Escrita", path: "img/projetos/autocad/projeto arquitetonico/Parte Escrita  - Amanda Campos - Turma 03.pdf", description: "Documentação completa do projeto arquitetônico.", icon: "fa-file-pdf"},
+                    {name: "Arquivo DWG", path: "img/projetos/autocad/projeto arquitetonico/AV3 - Amanda Campos_T03.dwg", description: "Arquivo DWG com as plantas arquitetônicas.", icon: "fa-file"}
                 ]
             },
             { 
@@ -1161,9 +1262,9 @@
                 category: "autocad", 
                 description: "Dimensionamento e detalhamento estrutural de uma escada residencial de lances adjacentes, desenvolvido para a disciplina de Estruturas de Concreto Armado II, na UFRN. Cálculo de vãos efetivos, levantamento de cargas (permanentes e variáveis), verificação de momentos fletores e detalhamento completo das armaduras longitudinais e de distribuição seguindo as normas NBR 6118 e NBR 6120.",
                 software: "AutoCAD",
-                mainFile: "img/projetos/autocad/estrutural-escadas/Amanda Campos - Projeto de Escadas 2025-02.pdf",
-                additionalFiles: [
-                    {name: "Arquivo DWG", path: "img/projetos/autocad/estrutural-escadas/Cad - Amanda Campos - Projeto de Escadas 2025-02.dwg"}
+                files: [
+                    {name: "Projeto de Escadas", path: "img/projetos/autocad/estrutural-escadas/Amanda Campos - Projeto de Escadas 2025-02.pdf", description: "Memorial de cálculo e detalhamento estrutural.", icon: "fa-file-pdf"},
+                    {name: "Arquivo DWG", path: "img/projetos/autocad/estrutural-escadas/Cad - Amanda Campos - Projeto de Escadas 2025-02.dwg", description: "Desenho técnico das escadas no AutoCAD.", icon: "fa-file"}
                 ]
             },
             { 
@@ -1171,12 +1272,17 @@
                 category: "elpla", 
                 description: "Relatório técnico e dimensionamento de um sistema de fundação mista para uma torre de 20 pavimentos, realizado para a disciplina de Fundações, na UFRN. Utiliza modelagem numérica no software ELPLA para análise da interação solo-estrutura, comparando malhas de estacas regulares e otimizadas em solo sedimentar com camadas moles.",
                 software: "ELPLA",
-                mainFile: "img/projetos/elpla/Projeto de Radier-Estaqueado - Amanda Campos.pdf",
-                additionalFiles: [
-                    {name: "Resultados (ZIP)", path: "img/projetos/elpla/Resultados/", isFolder: true}
+                files: [
+                    {name: "Projeto de Radier-Estaqueado", path: "img/projetos/elpla/Projeto de Radier-Estaqueado - Amanda Campos.pdf", description: "Relatório completo do dimensionamento geotécnico.", icon: "fa-file-pdf"},
+                    {name: "Resultados", path: "img/projetos/elpla/Resultados/", description: "Pasta com arquivos de resultados do ELPLA.", icon: "fa-folder", isFolder: true}
                 ]
             }
         ];
+
+        // Função para remover extensão do nome do arquivo
+        function removeExtension(filename) {
+            return filename.replace(/\.[^/.]+$/, "");
+        }
 
         // Função para renderizar projetos
         function renderProjects(filter = 'all') {
@@ -1186,101 +1292,25 @@
                 ? projects 
                 : projects.filter(project => project.category === filter);
             
-            filteredProjects.forEach(project => {
+            filteredProjects.forEach((project, index) => {
                 const projectCard = document.createElement('div');
                 projectCard.className = 'project-card';
                 projectCard.setAttribute('data-category', project.category);
-                
-                // Criar botões de arquivos adicionais
-                let additionalFilesHTML = '';
-                if (project.additionalFiles && project.additionalFiles.length > 0) {
-                    additionalFilesHTML = '<div class="additional-files"><strong>Arquivos adicionais:</strong><div class="download-links-container">';
-                    project.additionalFiles.forEach(file => {
-                        if (file.isFolder) {
-                            additionalFilesHTML += `
-                                <a href="${file.path}" class="download-link" download>
-                                    <i class="fas fa-folder"></i> ${file.name}
-                                </a>
-                            `;
-                        } else {
-                            additionalFilesHTML += `
-                                <a href="${file.path}" class="download-link" download>
-                                    <i class="fas fa-download"></i> ${file.name}
-                                </a>
-                            `;
-                        }
-                    });
-                    additionalFilesHTML += '</div></div>';
-                }
-                
-                // Criar lista de arquivos para impressão
-                let printFilesHTML = '';
-                let allFiles = [];
-                
-                // Adicionar arquivo principal
-                if (project.mainFile !== '#') {
-                    allFiles.push({
-                        name: 'Arquivo Principal',
-                        path: project.mainFile,
-                        type: 'PDF'
-                    });
-                }
-                
-                // Adicionar arquivos adicionais
-                if (project.additionalFiles && project.additionalFiles.length > 0) {
-                    project.additionalFiles.forEach(file => {
-                        allFiles.push({
-                            name: file.name,
-                            path: file.path,
-                            type: file.isFolder ? 'Pasta' : file.path.split('.').pop().toUpperCase()
-                        });
-                    });
-                }
-                
-                if (allFiles.length > 0) {
-                    printFilesHTML = '<div class="project-files-list">';
-                    printFilesHTML += '<h4>Arquivos do Projeto:</h4>';
-                    
-                    allFiles.forEach(file => {
-                        printFilesHTML += `
-                            <div class="file-item">
-                                <span><strong>${file.name}</strong> (${file.type})</span>
-                                <span class="file-path">${file.path}</span>
-                            </div>
-                        `;
-                    });
-                    
-                    printFilesHTML += '</div>';
-                }
-                
-                // Criar botão principal
-                let mainButtonHTML = '';
-                if (project.mainFile !== '#') {
-                    mainButtonHTML = `
-                        <a href="${project.mainFile}" class="project-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>   Ver Projeto
-                        </a>
-                    `;
-                } else {
-                    mainButtonHTML = `
-                        <div class="project-link" style="background-color: #ccc; cursor: not-allowed;">
-                            <i class="fas fa-external-link-alt"></i> PDF não disponível
-                        </div>
-                    `;
-                }
+                projectCard.setAttribute('data-project-index', index);
                 
                 projectCard.innerHTML = `
                     <div class="project-info">
                         <span class="project-category">${project.software}</span>
                         <h3>${project.title}</h3>
-                        <p>${project.description}</p>
-                        <div class="project-actions">
-                            ${mainButtonHTML}
-                            ${additionalFilesHTML}
-                        </div>
-                        ${printFilesHTML}
+                        <p>${project.description.substring(0, 120)}...</p>
+                        <p style="color: var(--primary-blue); margin-top: 1rem; font-size: 0.9rem;">
+                            <i class="fas fa-click-pointer"></i> Clique para ver ${project.files.length} arquivo(s)
+                        </p>
                     </div>
                 `;
+                
+                // Adicionar evento de clique para abrir o modal
+                projectCard.addEventListener('click', () => openProjectModal(project));
                 
                 projectCardsContainer.appendChild(projectCard);
             });
@@ -1288,7 +1318,7 @@
             // Se não houver projetos para a categoria
             if (filteredProjects.length === 0) {
                 projectCardsContainer.innerHTML = `
-                    <div style="grid-column: 1 / -1; text-align: justify; padding: 3rem;">
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
                         <i class="fas fa-folder-open" style="font-size: 3rem; color: var(--medium-blue); margin-bottom: 1rem;"></i>
                         <h3>Nenhum projeto encontrado para esta categoria</h3>
                         <p>Em breve adicionarei novos projetos aqui.</p>
@@ -1296,6 +1326,78 @@
                 `;
             }
         }
+
+        // Função para abrir o modal com os detalhes do projeto
+        function openProjectModal(project) {
+            const modal = document.getElementById('projectModal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDescription = document.getElementById('modal-description');
+            const modalFiles = document.getElementById('modal-files');
+            
+            modalTitle.textContent = project.title;
+            
+            modalDescription.innerHTML = `
+                <h3>Sobre o projeto</h3>
+                <p>${project.description}</p>
+                <p style="margin-top: 0.5rem;"><strong>Software:</strong> ${project.software}</p>
+            `;
+            
+            modalFiles.innerHTML = '';
+            
+            project.files.forEach(file => {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                
+                const fileName = removeExtension(file.name);
+                
+                let downloadLink;
+                if (file.isFolder) {
+                    downloadLink = `
+                        <a href="${file.path}" class="file-download" target="_blank">
+                            <i class="fas fa-folder-open"></i> Abrir Pasta
+                        </a>
+                    `;
+                } else {
+                    downloadLink = `
+                        <a href="${file.path}" class="file-download" download>
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    `;
+                }
+                
+                fileItem.innerHTML = `
+                    <div class="file-info">
+                        <i class="fas ${file.icon} file-icon"></i>
+                        <div class="file-details">
+                            <div class="file-name">${fileName}</div>
+                            <div class="file-description">${file.description}</div>
+                        </div>
+                    </div>
+                    ${downloadLink}
+                `;
+                
+                modalFiles.appendChild(fileItem);
+            });
+            
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Fechar modal
+        const modal = document.getElementById('projectModal');
+        const closeBtn = document.querySelector('.close-modal');
+        
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
 
         // Adicionar eventos aos botões de filtro
         filterButtons.forEach(button => {
