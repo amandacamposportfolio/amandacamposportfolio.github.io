@@ -1202,20 +1202,6 @@ footer .contact-info {
             });
         });
 
-        // Contador de visitas
-        function updateVisitorCount() {
-            let count = localStorage.getItem('visitorCount');
-            if (!count) {
-                count = 0;
-            }
-            count = parseInt(count) + 1;
-            localStorage.setItem('visitorCount', count);
-            document.getElementById('visitor-count').textContent = count;
-        }
-        
-        // Atualizar contador ao carregar a página
-        updateVisitorCount();
-
         // Filtro de projetos
         const filterButtons = document.querySelectorAll('.filter-btn');
         const projectCardsContainer = document.getElementById('projects-grid');
