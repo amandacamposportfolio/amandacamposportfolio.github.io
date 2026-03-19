@@ -584,6 +584,81 @@ footer .contact-info {
             background-color: #c4f5cc;
         }
         
+        /* Experiência Profissional */
+        .experience-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: var(--light-gray);
+            border-radius: 10px;
+            border-left: 5px solid var(--light-blue);
+        }
+        
+        .experience-item h4 {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-item .company {
+            font-weight: 600;
+            color: var(--medium-blue);
+        }
+        
+        .experience-item .date {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+            margin: 0.5rem 0;
+        }
+        
+        .experience-item .date i {
+            color: var(--light-blue);
+        }
+        
+        .experience-item .location {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+            margin: 0.5rem 0;
+        }
+        
+        .experience-item .location i {
+            color: var(--light-blue);
+        }
+        
+        .experience-description {
+            margin-top: 1rem;
+            line-height: 1.6;
+        }
+        
+        .experience-highlight {
+            background-color: var(--light-lime);
+            color: var(--primary-blue);
+            padding: 0.8rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-weight: 500;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .skill-tag {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        
         /* Responsividade */
         @media (max-width: 992px) {
             .about-content {
@@ -941,7 +1016,7 @@ footer .contact-info {
         <div class="container">
             <img src="img/eu/euzinha.jpeg" alt="Amanda Campos" class="profile-img" onerror="this.src='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80'">
             <h1>Amanda Campos</h1>
-            <p>Estudante de Engenharia Civil (10° semestre - UFRN) em busca de oportunidade de estágio para adquirir experiência prática na área de Projetos, Geotecnia, Planejamento ou Orçamento de Obras.</p>
+            <p>Tenho experiência em projetos complementares de engenharia, com foco no desenvolvimento e na compatibilização em BIM. Busco constantemente integrar organizações que promovam meu crescimento pessoal e profissional, valorizando o aprendizado contínuo e a evolução técnica. Minha atuação concentra-se nas áreas geotécnica, hidrossanitária e de projetos.</p>
             <div class="contact-info" style="max-width: 600px; margin: 0 auto;">
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
@@ -972,21 +1047,42 @@ footer .contact-info {
                     <p><strong>Bacharelado em Engenharia Civil</strong></p>
                     <p>Universidade Federal do Rio Grande do Norte (UFRN), Natal/RN</p>
                     <p>2021 - Em Andamento</p>
-        
                     
                     <h3 style="margin-top: 2rem;">Resumo Profissional</h3>
                     <p>Estudante de Engenharia Civil com experiência em estágio na Linhares e Rebouças, atuando em planejamento, orçamento e acompanhamento de obras. Busco oportunidade para continuar adquirindo experiência prática nas áreas de Projetos, Geotecnia, Planejamento ou Orçamento de Obras.</p>
 
-<!-- Experiência Profissional -->
-                    <h3 style="margin-top: 2rem;">Experiência Profissional</h3>
-                    <div style="margin-bottom: 2rem;">
-                        <p><strong>Estagiária de Engenharia Civil</strong></p>
-                        <p>Linhares e Rebouças - Natal/RN</p>
-                        <p style="display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0;">
-                            <i class="fas fa-calendar-alt" style="color: var(--primary-blue);"></i>
-                            <span>2026 - Em Andamento</span>
-                        </p>
-                        <p>Atuação em projetos de engenharia, com foco em projetos elétricos, hidrossanitários e prevenção contra incêndio.</p>
+                    <!-- Experiência Profissional - Atualizada conforme a imagem -->
+                    <h3 style="margin-top: 2rem; margin-bottom: 1.5rem;">Experiência Profissional</h3>
+                    
+                    <div class="experience-item">
+                        <h4>Estagiário de engenharia civil</h4>
+                        <div class="company">Linhares & Rebouças · Estágio</div>
+                        <div class="date">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>fev de 2026 - o momento · 2 meses</span>
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Natal, Rio Grande do Norte, Brasil · No local</span>
+                        </div>
+                        
+                        <div class="experience-description">
+                            <p>Atuação no desenvolvimento de projetos complementares e na compatibilização em BIM, utilizando ferramentas como Revit e AutoCAD para modelagem e apresentação de soluções ao cliente. Experiência na elaboração de projetos de instalações no estado do Rio Grande do Norte, incluindo condomínios de alto padrão (com destaque para empreendimentos em regiões turísticas como Pipa) em parceria com a empresa MVP, além de projetos de residências unifamiliares desenvolvidos em AutoCAD.</p>
+                        </div>
+                        
+                        <div class="experience-highlight">
+                            <i class="fas fa-certificate"></i>
+                            AutoCAD, Revit e mais 5 competências
+                        </div>
+                        
+                        <div class="skill-tags">
+                            <span class="skill-tag">AutoCAD</span>
+                            <span class="skill-tag">Revit</span>
+                            <span class="skill-tag">Projetos Complementares</span>
+                            <span class="skill-tag">BIM</span>
+                            <span class="skill-tag">Modelagem</span>
+                            <span class="skill-tag">Compatibilização</span>
+                        </div>
                     </div>
                     
                     <!-- Seção Cursos Complementares -->
