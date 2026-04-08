@@ -409,6 +409,7 @@
             height: 100%;
             display: flex;
             flex-direction: column;
+            position: relative;
         }
         
         .project-card:hover {
@@ -419,6 +420,7 @@
         .project-info {
             padding: 1.5rem;
             flex: 1;
+            padding-bottom: 2.5rem;
         }
         
         .project-category {
@@ -429,6 +431,18 @@
             border-radius: 15px;
             font-size: 0.8rem;
             margin-bottom: 1rem;
+        }
+        
+        .project-year {
+            position: absolute;
+            bottom: 0.75rem;
+            right: 1rem;
+            font-size: 0.75rem;
+            color: var(--medium-blue);
+            font-weight: 500;
+            background-color: rgba(181, 217, 2, 0.15);
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
         }
         
         /* Modal de Arquivos do Projeto */
@@ -1118,7 +1132,7 @@
    <!-- Hero Section -->
 <section class="hero" id="inicio">
     <div class="container">
-        <img src="img/eu/euzinha.jpeg" alt="Amanda Campos" class="profile-img" id="profileImage" onclick="changeImage()" onerror="this.src='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80'">
+        <img src="img/eu/Euzinha.jpeg" alt="Amanda Campos" class="profile-img" id="profileImage" onclick="changeImage()" onerror="this.src='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80'">
         <h1>Amanda Campos</h1>
         <p style="text-align: justify;">Possuo experiência em projetos complementares de engenharia, com foco no desenvolvimento e na compatibilização em BIM. Busco constantemente integrar organizações que promovam meu crescimento pessoal e profissional, valorizando o aprendizado contínuo e a evolução técnica. Minha atuação concentra-se nas áreas geotécnica, hidrossanitária e de projetos.</p>
         <div class="contact-info" style="max-width: 600px; margin: 0 auto;">
@@ -1370,8 +1384,7 @@
             </div>
             
             <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="www.linkedin.com/in/amanda-campos-81a87429b"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:amandacscampos@outlook.com"><i class="fas fa-envelope"></i></a>
             </div>
             
@@ -1424,12 +1437,13 @@
         const filterButtons = document.querySelectorAll('.filter-btn');
         const projectCardsContainer = document.getElementById('projects-grid');
         
-        // Dados dos projetos - PROJETOS PENN & WIZE AGORA DENTRO DA ABA REVIT
+        // Dados dos projetos - COM ANO DE DESENVOLVIMENTO SEPARADO
         const projects = [
             { 
                 title: "Projeto de Instalações Elétricas", 
                 category: "autocad", 
-                description: "Projeto elétrico completo de uma residência unifamiliar desenvolvido em 2023 durante a disciplina de Eletrotécnica Básica, na UFRN. Inclui o dimensionamento de circuitos de iluminação e força (TUGs e TUEs), quadro de medição de 70 A, diagramas unifilares e legenda padronizada de símbolos conforme as normas da Cosern.",
+                year: "2023",
+                description: "Projeto elétrico completo de uma residência unifamiliar desenvolvido durante a disciplina de Eletrotécnica Básica, na UFRN. Inclui o dimensionamento de circuitos de iluminação e força (TUGs e TUEs), quadro de medição de 70 A, diagramas unifilares e legenda padronizada de símbolos conforme as normas da Cosern.",
                 software: "AutoCAD",
                 files: [
                     {name: "Projeto de Instalações Elétricas", path: "img/projetos/autocad/eletrico/PROJETO DE INSTALAÇÕES ELÉTRICAS.pdf", description: "Planta baixa com circuitos elétricos, diagrama unifilar e quadro de cargas.", icon: "fa-file-pdf"},
@@ -1439,6 +1453,7 @@
             { 
                 title: "As Built de uma Residência Unifamiliar", 
                 category: "autocad", 
+                year: "AAAA",
                 description: "Projeto no formato As Built (como construído) de um imóvel residencial de dois pavimentos. Contém plantas baixas detalhadas do térreo e primeiro andar na escala 1:50, além da planta de situação, apresentando as dimensões reais e a locação exata da edificação no terreno.",
                 software: "AutoCAD",
                 files: [
@@ -1448,7 +1463,8 @@
             { 
                 title: "Planta arquitetônica de uma residência", 
                 category: "autocad", 
-                description: "Documentação escrita e planejamento arquitetônico para uma residência unifamiliar, desenvolvido em 2022 durante a disciplina de Projeto Arquitetônico, na UFRN. Define o programa de necessidades (setores social, íntimo e serviço), quadros de ventilação, dimensionamento de reservatórios de água e memorial descritivo focado no conforto e funcionalidade.",
+                year: "2022",
+                description: "Documentação escrita e planejamento arquitetônico para uma residência unifamiliar, desenvolvido durante a disciplina de Projeto Arquitetônico, na UFRN. Define o programa de necessidades (setores social, íntimo e serviço), quadros de ventilação, dimensionamento de reservatórios de água e memorial descritivo focado no conforto e funcionalidade.",
                 software: "AutoCAD",
                 files: [
                     {name: "Parte Escrita", path: "img/projetos/autocad/projeto arquitetonico/Parte Escrita  - Amanda Campos - Turma 03.pdf", description: "Documentação completa do projeto arquitetônico.", icon: "fa-file-pdf"},
@@ -1458,7 +1474,8 @@
             { 
                 title: "Projeto Estrutural de uma escada", 
                 category: "autocad", 
-                description: "Dimensionamento e detalhamento estrutural de uma escada residencial de lances adjacentes, desenvolvido em 2025 durante a disciplina de Estruturas de Concreto Armado II, na UFRN. Cálculo de vãos efetivos, levantamento de cargas (permanentes e variáveis), verificação de momentos fletores e detalhamento completo das armaduras longitudinais e de distribuição seguindo as normas NBR 6118 e NBR 6120.",
+                year: "2025",
+                description: "Dimensionamento e detalhamento estrutural de uma escada residencial de lances adjacentes, desenvolvido durante a disciplina de Estruturas de Concreto Armado II, na UFRN. Cálculo de vãos efetivos, levantamento de cargas (permanentes e variáveis), verificação de momentos fletores e detalhamento completo das armaduras longitudinais e de distribuição seguindo as normas NBR 6118 e NBR 6120.",
                 software: "AutoCAD",
                 files: [
                     {name: "Projeto de Escadas", path: "img/projetos/autocad/estrutural-escadas/Amanda Campos - Projeto de Escadas 2025-02.pdf", description: "Memorial de cálculo e detalhamento estrutural.", icon: "fa-file-pdf"},
@@ -1467,7 +1484,8 @@
             { 
                 title: "Dimensionamento e Projeto Geotécnico de Fundação Mista (Radier-Estaqueado)", 
                 category: "elpla", 
-                description: "Relatório técnico e dimensionamento de um sistema de fundação mista para uma torre de 20 pavimentos, desenvolvido em 2025 durante a disciplina de Fundações, na UFRN. Utiliza modelagem numérica no software ELPLA para análise da interação solo-estrutura, comparando malhas de estacas regulares e otimizadas em solo sedimentar com camadas moles.",
+                year: "2025",
+                description: "Relatório técnico e dimensionamento de um sistema de fundação mista para uma torre de 20 pavimentos, desenvolvido durante a disciplina de Fundações, na UFRN. Utiliza modelagem numérica no software ELPLA para análise da interação solo-estrutura, comparando malhas de estacas regulares e otimizadas em solo sedimentar com camadas moles.",
                 software: "ELPLA",
                 files: [
                     {name: "Projeto de Radier-Estaqueado", path: "img/projetos/elpla/Projeto de Radier-Estaqueado - Amanda Campos.pdf", description: "Relatório completo do dimensionamento geotécnico.", icon: "fa-file-pdf"},
@@ -1478,6 +1496,7 @@
             { 
                 title: "Modelagem BIM em Revit - Residência Unifamiliar", 
                 category: "revit", 
+                year: "AAAA",
                 description: "Projeto desenvolvido no software Revit para modelagem BIM de uma residência unifamiliar. Inclui a modelagem arquitetônica completa, criação de famílias personalizadas, quantitativos de materiais e compatibilização entre disciplinas. O projeto demonstra a aplicação da metodologia BIM para otimização do processo de projeto e construção.",
                 software: "Revit",
                 files: [
@@ -1488,7 +1507,8 @@
             { 
                 title: "Penn & Wize - Projeto de Esgoto", 
                 category: "revit", 
-                description: "Projeto hidrossanitário do sistema de esgoto de um condomínio residencial, desenvolvido em 2026 durante a disciplina de Projeto de Instalações Hidrossanitárias, na UFRN. Inclui dimensionamento da rede coletora interna do condomínio, cálculo de declividades e verificação de velocidades conforme a NBR 8160.",
+                year: "2026",
+                description: "Projeto hidrossanitário do sistema de esgoto de um condomínio residencial, desenvolvido durante a disciplina de Projeto de Instalações Hidrossanitárias, na UFRN. Inclui dimensionamento da rede coletora interna do condomínio, cálculo de declividades e verificação de velocidades conforme a NBR 8160.",
                 software: "Revit / Penn & Wize",
                 files: [
                     {name: "Penn & Wize - Esgoto", path: "img/projetos/PennWize/Penn & Wize - Esgoto.pdf", description: "Projeto completo do sistema de esgoto sanitário.", icon: "fa-file-pdf"},
@@ -1498,7 +1518,8 @@
             { 
                 title: "Penn & Wize - Projeto de Água Fria e Quente", 
                 category: "revit", 
-                description: "Projeto hidrossanitário do sistema de água fria e água quente de um condomínio residencial, desenvolvido em 2026 durante a disciplina de Projeto de Instalações Hidrossanitárias, na UFRN. Contém dimensionamento de ramais, colunas e barriletes, cálculo da bomba de recalque, definição do reservatório superior e inferior, além do sistema de aquecimento solar com circulação forçada.",
+                year: "2026",
+                description: "Projeto hidrossanitário do sistema de água fria e água quente de um condomínio residencial, desenvolvido durante a disciplina de Projeto de Instalações Hidrossanitárias, na UFRN. Contém dimensionamento de ramais, colunas e barriletes, cálculo da bomba de recalque, definição do reservatório superior e inferior, além do sistema de aquecimento solar com circulação forçada.",
                 software: "Revit / Penn & Wize",
                 files: [
                     {name: "Penn & Wize - Água Fria e Quente", path: "img/projetos/PennWize/Penn & Wize - Água Fria e Quente.pdf", description: "Projeto completo das instalações de água fria e quente.", icon: "fa-file-pdf"},
@@ -1508,7 +1529,8 @@
             { 
                 title: "Penn & Wize - Projeto de Águas Pluviais", 
                 category: "revit", 
-                description: "Projeto hidrossanitário do sistema de águas pluviais de um condomínio residencial,  desenvolvido em 2026 durante a disciplina de Projeto de Instalações Hidrossanitárias, na UFRN. Inclui dimensionamento de calhas, condutores verticais e horizontais, cálculo de vazões de projeto utilizando método racional, e definição de dispositivos de captação e condução seguindo as normas NBR 10844 e NBR 6123.",
+                year: "2026",
+                description: "Projeto hidrossanitário do sistema de águas pluviais de um condomínio residencial, desenvolvido durante a disciplina de Projeto de Instalações Hidrossanitárias, na UFRN. Inclui dimensionamento de calhas, condutores verticais e horizontais, cálculo de vazões de projeto utilizando método racional, e definição de dispositivos de captação e condução seguindo as normas NBR 10844 e NBR 6123.",
                 software: "Revit / Penn & Wize",
                 files: [
                     {name: "Penn & Wize - Água Pluvial", path: "img/projetos/PennWize/Penn & Wize - Água Pluvial.pdf", description: "Projeto completo do sistema de águas pluviais.", icon: "fa-file-pdf"},
@@ -1541,10 +1563,11 @@
                         <span class="project-category">${project.software}</span>
                         <h3>${project.title}</h3>
                         <p>${project.description.substring(0, 120)}...</p>
-<p style="color: var(--primary-blue); margin-top: 1rem; font-size: 0.9rem;">
-    <i class="fas fa-external-link-alt"></i> Ver Projeto
-</p>
+                        <p style="color: var(--primary-blue); margin-top: 1rem; font-size: 0.9rem;">
+                            <i class="fas fa-external-link-alt"></i> Ver Projeto
+                        </p>
                     </div>
+                    <div class="project-year">${project.year}</div>
                 `;
                 
                 // Adicionar evento de clique para abrir o modal
@@ -1578,6 +1601,7 @@
                 <h3>Sobre o projeto</h3>
                 <p>${project.description}</p>
                 <p style="margin-top: 0.5rem;"><strong>Software:</strong> ${project.software}</p>
+                <p style="margin-top: 0.5rem;"><strong>Ano:</strong> ${project.year}</p>
             `;
             
             modalFiles.innerHTML = '';
