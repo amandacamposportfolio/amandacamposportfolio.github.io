@@ -151,6 +151,12 @@
             object-fit: cover;
             border: 5px solid var(--light-lime);
             margin-bottom: 2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.05);
         }
         
         /* Sobre/Currículo */
@@ -1112,7 +1118,7 @@
    <!-- Hero Section -->
 <section class="hero" id="inicio">
     <div class="container">
-        <img src="img/eu/euzinha.jpeg" alt="Amanda Campos" class="profile-img" onerror="this.src='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80'">
+        <img src="img/eu/euzinha.jpeg" alt="Amanda Campos" class="profile-img" id="profileImage" onclick="changeImage()" onerror="this.src='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80'">
         <h1>Amanda Campos</h1>
         <p style="text-align: justify;">Possuo experiência em projetos complementares de engenharia, com foco no desenvolvimento e na compatibilização em BIM. Busco constantemente integrar organizações que promovam meu crescimento pessoal e profissional, valorizando o aprendizado contínuo e a evolução técnica. Minha atuação concentra-se nas áreas geotécnica, hidrossanitária e de projetos.</p>
         <div class="contact-info" style="max-width: 600px; margin: 0 auto;">
@@ -1320,7 +1326,6 @@
                 <button class="filter-btn" data-filter="autocad">AutoCAD</button>
                 <button class="filter-btn" data-filter="elpla">ELPLA</button>
                 <button class="filter-btn" data-filter="revit">Revit</button>
-                <button class="filter-btn" data-filter="pennwize">Penn & Wize</button>
             </div>
             
             <div class="projects-grid" id="projects-grid">
@@ -1380,6 +1385,17 @@
     </footer>
 
     <script>
+        // ==================== FUNÇÃO PARA TROCAR A FOTO AO CLICAR ====================
+        const imagesList = ['img/eu/euzinha.jpeg', 'img/eu/euzinha 2.jpeg', 'img/eu/euzinha 3.jpeg'];
+        let currentImageIndex = 0;
+        
+        function changeImage() {
+            currentImageIndex = (currentImageIndex + 1) % imagesList.length;
+            const imgElement = document.getElementById('profileImage');
+            imgElement.src = imagesList[currentImageIndex];
+        }
+        // ============================================================================
+
         // Menu responsivo
         document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
             document.getElementById('nav-menu').classList.toggle('show');
@@ -1408,7 +1424,7 @@
         const filterButtons = document.querySelectorAll('.filter-btn');
         const projectCardsContainer = document.getElementById('projects-grid');
         
-        // Dados dos projetos baseados na estrutura do GitHub - ADICIONADOS NOVOS PROJETOS
+        // Dados dos projetos - PROJETOS PENN & WIZE AGORA DENTRO DA ABA REVIT
         const projects = [
             { 
                 title: "Projeto de Instalações Elétricas", 
@@ -1458,7 +1474,7 @@
                     {name: "Resultados", path: "img/projetos/elpla/Resultados/", description: "Pasta com arquivos de resultados do ELPLA.", icon: "fa-folder", isFolder: true}
                 ]
             },
-            // NOVO PROJETO 1: Projeto em Revit
+            // PROJETOS DA ABA REVIT (incluindo os 3 projetos Penn & Wize)
             { 
                 title: "Modelagem BIM em Revit - Residência Unifamiliar", 
                 category: "revit", 
@@ -1469,34 +1485,34 @@
                     {name: "Documentação do Projeto", path: "img/projetos/revit/Residencia_Unifamiliar/", description: "Plantas, cortes, elevações e tabelas de quantitativos.", icon: "fa-folder", isFolder: true}
                 ]
             },
-            // NOVO PROJETO 2: Projeto Penn & Wize - Esgoto
             { 
                 title: "Penn & Wize - Projeto de Esgoto Sanitário", 
-                category: "pennwize", 
+                category: "revit", 
                 description: "Projeto hidrossanitário completo desenvolvido pela Penn & Wize para sistema de esgoto sanitário de condomínio residencial. Inclui dimensionamento da rede coletora, cálculo de declividades, verificação de velocidades e tensões tratoras, além da definição de poços de visita e estações elevatórias conforme normas da ABNT.",
-                software: "Penn & Wize",
+                software: "Revit / Penn & Wize",
                 files: [
-                    {name: "Penn & Wize - Esgoto", path: "img/projetos/PennWize/Penn & Wize - Esgoto.pdf", description: "Projeto completo do sistema de esgoto sanitário.", icon: "fa-file-pdf"}
+                    {name: "Penn & Wize - Esgoto", path: "img/projetos/PennWize/Penn & Wize - Esgoto.pdf", description: "Projeto completo do sistema de esgoto sanitário.", icon: "fa-file-pdf"},
+                    {name: "Memorial ESG", path: "img/projetos/PennWize/Memorial ESG.xlsx", description: "Memorial de cálculo do projeto de esgoto.", icon: "fa-file-excel"}
                 ]
             },
-            // NOVO PROJETO 3: Projeto Penn & Wize - Água Fria e Quente
             { 
                 title: "Penn & Wize - Projeto de Água Fria e Quente", 
-                category: "pennwize", 
+                category: "revit", 
                 description: "Projeto de instalações hidráulicas prediais desenvolvido pela Penn & Wize para sistema de água fria e água quente. Contém dimensionamento de ramais, colunas e barriletes, cálculo da bomba de recalque, definição do reservatório superior e inferior, além do sistema de aquecimento solar com circulação forçada.",
-                software: "Penn & Wize",
+                software: "Revit / Penn & Wize",
                 files: [
-                    {name: "Penn & Wize - Água Fria e Quente", path: "img/projetos/PennWize/Penn & Wize - Água Fria e Quente.pdf", description: "Projeto completo das instalações de água fria e quente.", icon: "fa-file-pdf"}
+                    {name: "Penn & Wize - Água Fria e Quente", path: "img/projetos/PennWize/Penn & Wize - Água Fria e Quente.pdf", description: "Projeto completo das instalações de água fria e quente.", icon: "fa-file-pdf"},
+                    {name: "Memorial AF e AQ", path: "img/projetos/PennWize/Memorial AF e AQ.xlsx", description: "Memorial de cálculo das instalações hidráulicas.", icon: "fa-file-excel"}
                 ]
             },
-            // NOVO PROJETO 4: Projeto Penn & Wize - Água Pluvial
             { 
                 title: "Penn & Wize - Projeto de Águas Pluviais", 
-                category: "pennwize", 
+                category: "revit", 
                 description: "Projeto de drenagem de águas pluviais desenvolvido pela Penn & Wize para condomínio residencial. Inclui dimensionamento de calhas, condutores verticais e horizontais, cálculo de vazões de projeto utilizando método racional, e definição de dispositivos de captação e condução seguindo as normas NBR 10844 e NBR 6123.",
-                software: "Penn & Wize",
+                software: "Revit / Penn & Wize",
                 files: [
-                    {name: "Penn & Wize - Água Pluvial", path: "img/projetos/PennWize/Penn & Wize - Água Pluvial.pdf", description: "Projeto completo do sistema de águas pluviais.", icon: "fa-file-pdf"}
+                    {name: "Penn & Wize - Água Pluvial", path: "img/projetos/PennWize/Penn & Wize - Água Pluvial.pdf", description: "Projeto completo do sistema de águas pluviais.", icon: "fa-file-pdf"},
+                    {name: "Memorial AP", path: "img/projetos/PennWize/Memorial AP.xlsx", description: "Memorial de cálculo do sistema de drenagem.", icon: "fa-file-excel"}
                 ]
             }
         ];
@@ -1572,6 +1588,16 @@
                 
                 const fileName = removeExtension(file.name);
                 
+                // Determinar ícone baseado na extensão
+                let iconClass = file.icon;
+                if (file.name.endsWith('.xlsx')) {
+                    iconClass = 'fa-file-excel';
+                } else if (file.name.endsWith('.pdf')) {
+                    iconClass = 'fa-file-pdf';
+                } else if (file.name.endsWith('.dwg')) {
+                    iconClass = 'fa-file';
+                }
+                
                 let downloadLink;
                 if (file.isFolder) {
                     downloadLink = `
@@ -1589,7 +1615,7 @@
                 
                 fileItem.innerHTML = `
                     <div class="file-info">
-                        <i class="fas ${file.icon} file-icon"></i>
+                        <i class="fas ${iconClass} file-icon"></i>
                         <div class="file-details">
                             <div class="file-name">${fileName}</div>
                             <div class="file-description">${file.description}</div>
