@@ -1319,6 +1319,8 @@
                 <button class="filter-btn active" data-filter="all">Todos</button>
                 <button class="filter-btn" data-filter="autocad">AutoCAD</button>
                 <button class="filter-btn" data-filter="elpla">ELPLA</button>
+                <button class="filter-btn" data-filter="revit">Revit</button>
+                <button class="filter-btn" data-filter="pennwize">Penn & Wize</button>
             </div>
             
             <div class="projects-grid" id="projects-grid">
@@ -1406,7 +1408,7 @@
         const filterButtons = document.querySelectorAll('.filter-btn');
         const projectCardsContainer = document.getElementById('projects-grid');
         
-        // Dados dos projetos baseados na estrutura do GitHub
+        // Dados dos projetos baseados na estrutura do GitHub - ADICIONADOS NOVOS PROJETOS
         const projects = [
             { 
                 title: "Projeto de Instalações Elétricas", 
@@ -1454,6 +1456,47 @@
                 files: [
                     {name: "Projeto de Radier-Estaqueado", path: "img/projetos/elpla/Projeto de Radier-Estaqueado - Amanda Campos.pdf", description: "Relatório completo do dimensionamento geotécnico.", icon: "fa-file-pdf"},
                     {name: "Resultados", path: "img/projetos/elpla/Resultados/", description: "Pasta com arquivos de resultados do ELPLA.", icon: "fa-folder", isFolder: true}
+                ]
+            },
+            // NOVO PROJETO 1: Projeto em Revit
+            { 
+                title: "Modelagem BIM em Revit - Residência Unifamiliar", 
+                category: "revit", 
+                description: "Projeto desenvolvido no software Revit para modelagem BIM de uma residência unifamiliar. Inclui a modelagem arquitetônica completa, criação de famílias personalizadas, quantitativos de materiais e compatibilização entre disciplinas. O projeto demonstra a aplicação da metodologia BIM para otimização do processo de projeto e construção.",
+                software: "Revit",
+                files: [
+                    {name: "Projeto Revit - Arquivo RVT", path: "img/projetos/revit/Residencia_Unifamiliar/", description: "Pasta com o arquivo principal do projeto Revit (.rvt) e arquivos vinculados.", icon: "fa-folder", isFolder: true},
+                    {name: "Documentação do Projeto", path: "img/projetos/revit/Residencia_Unifamiliar/", description: "Plantas, cortes, elevações e tabelas de quantitativos.", icon: "fa-folder", isFolder: true}
+                ]
+            },
+            // NOVO PROJETO 2: Projeto Penn & Wize - Esgoto
+            { 
+                title: "Penn & Wize - Projeto de Esgoto Sanitário", 
+                category: "pennwize", 
+                description: "Projeto hidrossanitário completo desenvolvido pela Penn & Wize para sistema de esgoto sanitário de condomínio residencial. Inclui dimensionamento da rede coletora, cálculo de declividades, verificação de velocidades e tensões tratoras, além da definição de poços de visita e estações elevatórias conforme normas da ABNT.",
+                software: "Penn & Wize",
+                files: [
+                    {name: "Penn & Wize - Esgoto", path: "img/projetos/PennWize/Penn & Wize - Esgoto.pdf", description: "Projeto completo do sistema de esgoto sanitário.", icon: "fa-file-pdf"}
+                ]
+            },
+            // NOVO PROJETO 3: Projeto Penn & Wize - Água Fria e Quente
+            { 
+                title: "Penn & Wize - Projeto de Água Fria e Quente", 
+                category: "pennwize", 
+                description: "Projeto de instalações hidráulicas prediais desenvolvido pela Penn & Wize para sistema de água fria e água quente. Contém dimensionamento de ramais, colunas e barriletes, cálculo da bomba de recalque, definição do reservatório superior e inferior, além do sistema de aquecimento solar com circulação forçada.",
+                software: "Penn & Wize",
+                files: [
+                    {name: "Penn & Wize - Água Fria e Quente", path: "img/projetos/PennWize/Penn & Wize - Água Fria e Quente.pdf", description: "Projeto completo das instalações de água fria e quente.", icon: "fa-file-pdf"}
+                ]
+            },
+            // NOVO PROJETO 4: Projeto Penn & Wize - Água Pluvial
+            { 
+                title: "Penn & Wize - Projeto de Águas Pluviais", 
+                category: "pennwize", 
+                description: "Projeto de drenagem de águas pluviais desenvolvido pela Penn & Wize para condomínio residencial. Inclui dimensionamento de calhas, condutores verticais e horizontais, cálculo de vazões de projeto utilizando método racional, e definição de dispositivos de captação e condução seguindo as normas NBR 10844 e NBR 6123.",
+                software: "Penn & Wize",
+                files: [
+                    {name: "Penn & Wize - Água Pluvial", path: "img/projetos/PennWize/Penn & Wize - Água Pluvial.pdf", description: "Projeto completo do sistema de águas pluviais.", icon: "fa-file-pdf"}
                 ]
             }
         ];
