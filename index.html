@@ -1119,7 +1119,6 @@ footer {
                         <div class="company">Linhares & Rebouças · Estágio</div>
                         <div class="date">
                             <i class="fas fa-calendar-alt"></i>
-                            <!-- Data com span dinâmico para duração do estágio -->
                             <span>fev de 2026 - o momento · <span id="estagio-duracao">2</span> meses</span>
                         </div>
                         <div class="location">
@@ -1333,27 +1332,19 @@ footer {
 
         // ==================== ATUALIZAÇÃO AUTOMÁTICA DA DURAÇÃO DO ESTÁGIO ====================
         function updateEstagioDuration() {
-            // Data de início: fevereiro de 2026 (mês 1 = fevereiro)
             const startDate = new Date(2026, 1, 1);
             const now = new Date();
             let months = (now.getFullYear() - startDate.getFullYear()) * 12 + (now.getMonth() - startDate.getMonth());
-            // Ajuste caso o dia atual seja anterior ao dia de início (não necessário aqui, pois startDate.getDate() = 1, mas mantemos como boa prática)
-            if (now.getDate() < startDate.getDate()) {
-                months--;
-            }
+            if (now.getDate() < startDate.getDate()) months--;
             if (months < 0) months = 0;
             const durationSpan = document.getElementById('estagio-duracao');
-            if (durationSpan) {
-                durationSpan.textContent = months;
-            }
+            if (durationSpan) durationSpan.textContent = months;
         }
-        // Executa ao carregar a página e também sempre que a página for reexibida (caso o usuário deixe aberta por muito tempo)
         document.addEventListener('DOMContentLoaded', updateEstagioDuration);
-        // Opcional: atualizar a cada hora para refletir mudanças no mesmo dia (se o usuário mantiver a página aberta)
-        setInterval(updateEstagioDuration, 3600000); // a cada 1 hora
+        setInterval(updateEstagioDuration, 3600000);
         // ======================================================================================
 
-        // Filtro e dados dos projetos (mantido exatamente igual ao original)
+        // Filtro e dados dos projetos
         const filterButtons = document.querySelectorAll('.filter-btn');
         const projectCardsContainer = document.getElementById('projects-grid');
         const projects = [
@@ -1380,13 +1371,15 @@ footer {
                 projectCard.className = 'project-card';
                 projectCard.setAttribute('data-category', project.category);
                 projectCard.setAttribute('data-project-index', index);
+                // Descrição completa (sem cortar)
+                const fullDescription = project.description;
                 projectCard.innerHTML = `
                     <div class="project-info">
                         <span class="project-category">${project.software}</span>
                         <h3>${project.title}</h3>
-                        <p>${project.description.substring(0, 120)}...</p>
+                        <p>${fullDescription}</p>
                         <p style="color: var(--primary-blue); margin-top: 1rem; font-size: 0.9rem;">
-    
+                            <i class="fas fa-external-link-alt"></i> Ver Projeto
                         </p>
                     </div>
                     <div class="project-year">${project.year}</div>
@@ -1425,11 +1418,12 @@ footer {
                 if (file.name.endsWith('.xlsx')) iconClass = 'fa-file-excel';
                 else if (file.name.endsWith('.pdf')) iconClass = 'fa-file-pdf';
                 else if (file.name.endsWith('.dwg')) iconClass = 'fa-file';
-                let downloadLink;
+                let openLink;
                 if (file.isFolder) {
-                    downloadLink = `<a href="${file.path}" class="file-download" target="_blank"><i class="fas fa-folder-open"></i> Abrir Pasta</a>`;
+                    openLink = `<a href="${file.path}" class="file-download" target="_blank"><i class="fas fa-folder-open"></i> Abrir Pasta</a>`;
                 } else {
-                    downloadLink = `<a href="${file.path}" class="file-download" download><i class="fas fa-download"></i> Download</a>`;
+                    // Abrir o arquivo em nova aba (sem download)
+                    openLink = `<a href="${file.path}" class="file-download" target="_blank"><i class="fas fa-external-link-alt"></i> Abrir Arquivo</a>`;
                 }
                 fileItem.innerHTML = `
                     <div class="file-info">
@@ -1439,7 +1433,7 @@ footer {
                             <div class="file-description">${file.description}</div>
                         </div>
                     </div>
-                    ${downloadLink}
+                    ${openLink}
                 `;
                 modalFiles.appendChild(fileItem);
             });
