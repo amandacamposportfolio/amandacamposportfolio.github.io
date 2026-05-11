@@ -1138,10 +1138,9 @@ footer {
                             <span class="skill-tag">Compatibilização</span>
                         </div>
                     </div>
-                    <!-- Fim da coluna esquerda -->
                 </div>
                 
-                <!-- COLUNA DIREITA -->
+                <!-- COLUNA DIREITA - Softwares, Áreas de Interesse e Cursos Complementares -->
                 <div>
                     <h3>Softwares</h3>
                     <p>Domínio das seguintes ferramentas e softwares:</p>
@@ -1155,8 +1154,8 @@ footer {
                         <div class="software-chip">Word</div>
                         <div class="software-chip">Excel</div>
                     </div>
-
-<div class="areas-of-interest">
+                    
+                    <div class="areas-of-interest">
                         <h3>Áreas de Interesse</h3>
                         <ul class="areas-list">
                             <li>Projetos de Engenharia Civil</li>
@@ -1165,10 +1164,10 @@ footer {
                             <li>Orçamento de Obras</li>
                         </ul>
                     </div>
-                    
-                    <!-- Cursos Complementares movido para baixo de Áreas de Interesse -->
+
+                    <!-- Cursos Complementares movido para cá (abaixo de Áreas de Interesse) -->
                     <div class="courses-list">
-                        <h3 style="margin-top: 1.5rem; margin-bottom: 1.5rem;">Cursos Complementares</h3>
+                        <h3 style="margin-top: 2rem; margin-bottom: 1.5rem;">Cursos Complementares</h3>
                         
                         <div class="course-item">
                             <h4 class="course-title">Conceitos essenciais sobre Patologias em Estruturas de Concreto</h4>
@@ -1248,7 +1247,7 @@ footer {
                             </a>
                         </div>
                     </div>
-                             </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1376,7 +1375,6 @@ footer {
                 projectCard.className = 'project-card';
                 projectCard.setAttribute('data-category', project.category);
                 projectCard.setAttribute('data-project-index', index);
-                // Descrição completa (sem cortar)
                 const fullDescription = project.description;
                 projectCard.innerHTML = `
                     <div class="project-info">
@@ -1426,7 +1424,6 @@ footer {
                 if (file.isFolder) {
                     openLink = `<a href="${file.path}" class="file-download" target="_blank"><i class="fas fa-folder-open"></i> Abrir Pasta</a>`;
                 } else {
-                    // Abrir o arquivo em nova aba (sem download)
                     openLink = `<a href="${file.path}" class="file-download" target="_blank"><i class="fas fa-external-link-alt"></i> Abrir Arquivo</a>`;
                 }
                 fileItem.innerHTML = `
