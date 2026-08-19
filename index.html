@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">Amanda Campos</div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Currículo</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="container">
+            <img src="img/eu/Euzinha.jpeg" alt="Amanda Campos" class="profile-img" id="profileImage" onclick="changeImage()" onerror="this.src='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80'">
+            <h1>Amanda Campos</h1>
+            <p style="text-align: justify;">Possuo experiência em projetos complementares de engenharia, com foco no desenvolvimento e na compatibilização em BIM. Busco constantemente integrar organizações que promovam meu crescimento pessoal e profissional, valorizando o aprendizado contínuo e a evolução técnica. Minha atuação concentra-se nas áreas geotécnica, hidrossanitária e de projetos.</p>
+            <div class="contact-info" style="max-width: 600px; margin: 0 auto;">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>(84) 98145-7513</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>amandacscampos@outlook.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Natal-RN</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="sobre">
+        <div class="container">
+            <h2 class="section-title">Currículo</h2>
+            <div class="about-content">
+                <div class="vertical-divider"></div>
+                
+                <!-- COLUNA ESQUERDA -->
+                <div>
+                    <h3>Formação Acadêmica</h3>
+                    <p><strong>Bacharelado em Engenharia Civil</strong></p>
+                    <p>Universidade Federal do Rio Grande do Norte (UFRN), Natal/RN</p>
+                    <p>2021 - Em Andamento</p>
+                    
+                    <h3 style="margin-top: 2rem;">Resumo Profissional</h3>
+                    <p>Estudante de Engenharia Civil com experiência em estágio na Linhares e Rebouças, atuando em planejamento, orçamento e acompanhamento de obras. Busco oportunidade para continuar adquirindo experiência prática nas áreas de Projetos, Geotecnia, Planejamento ou Orçamento de Obras.</p>
+
+                    <h3 style="margin-top: 2rem; margin-bottom: 1.5rem;">Experiência Profissional</h3>
+
+                    <div class="experience-item">
+                        <h4>Monitora de Cálculo II</h4>
+                        <div class="company">UFRN · Bolsista</div>
+                        <div class="date">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>mar de 2023 - dez 2024 · 1 ano</span>
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Natal, Rio Grande do Norte, Brasil · Presencial</span>
+                        </div>
+                        <div class="experience-description">
+                            <p style="text-align: justify;">Atuei como monitora da disciplina de Cálculo II na Universidade Federal do Rio Grande do Norte, auxiliando os alunos no acompanhamento dos conteúdos da disciplina, resolução de exercícios e esclarecimento de dúvidas relacionadas aos temas abordados em sala de aula. Durante a monitoria, desenvolvi habilidades de comunicação, didática e trabalho em equipe, contribuindo para o apoio acadêmico dos estudantes e para o fortalecimento da minha base em matemática aplicada às engenharias.</p>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Cálculo I</span>
+                            <span class="skill-tag">Cálculo II</span>
+                            <span class="skill-tag">Cálculo III</span>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <h4>Estagiário de engenharia civil</h4>
+                        <div class="company">Linhares & Rebouças · Estágio</div>
+                        <div class="date">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>fev de 2026 - o momento · <span id="estagio-duracao">2</span> meses</span>
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Natal, Rio Grande do Norte, Brasil · Presencial</span>
+                        </div>
+                        <div class="experience-description">
+                            <p style="text-align: justify;">Atuei no desenvolvimento de projetos complementares e na compatibilização em BIM, utilizando ferramentas como Revit e AutoCAD para modelagem e apresentação de soluções ao cliente. Tenho experiência na elaboração de projetos de instalações no estado do Rio Grande do Norte, incluindo condomínios de alto padrão (com destaque para empreendimentos em regiões turísticas como Pipa) em parceria com a empresa MVP, além de projetos de residências unifamiliares desenvolvidos em AutoCAD.</p>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AutoCAD</span>
+                            <span class="skill-tag">Revit</span>
+                            <span class="skill-tag">Projetos Complementares</span>
+                            <span class="skill-tag">BIM</span>
+                            <span class="skill-tag">Modelagem</span>
+                            <span class="skill-tag">Compatibilização</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- COLUNA DIREITA - Softwares, Áreas de Interesse e Cursos Complementares -->
+                <div>
+                    <h3>Softwares</h3>
+                    <p>Domínio das seguintes ferramentas e softwares:</p>
+                    <div class="software-list">
+                        <div class="software-chip">AutoCAD</div>
+                        <div class="software-chip">Civil 3D</div>
+                        <div class="software-chip">ELPLA</div>
+                        <div class="software-chip">Revit</div>
+                        <div class="software-chip">ArcGIS</div>
+                        <div class="software-chip">SketchUp</div>
+                        <div class="software-chip">Word</div>
+                        <div class="software-chip">Excel</div>
+                    </div>
+                    
+                    <div class="areas-of-interest">
+                        <h3>Áreas de Interesse</h3>
+                        <ul class="areas-list">
+                            <li>Projetos de Engenharia Civil</li>
+                            <li>Geotecnia</li>
+                            <li>Planejamento de Obras</li>
+                            <li>Orçamento de Obras</li>
+                        </ul>
+                    </div>
+
+                    <!-- Cursos Complementares movido para cá (abaixo de Áreas de Interesse) -->
+                    <div class="courses-list">
+                        <h3 style="margin-top: 2rem; margin-bottom: 1.5rem;">Cursos Complementares</h3>
+                        
+                        <div class="course-item">
+                            <h4 class="course-title">Conceitos essenciais sobre Patologias em Estruturas de Concreto</h4>
+                            <span class="course-hours">30h</span>
+                            <div class="course-details">
+                                <div class="course-detail">
+                                    <i class="fas fa-university"></i>
+                                    <span>ENAP</span>
+                                </div>
+                                <div class="course-detail">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Mar-Abr 2024</span>
+                                </div>
+                                <div class="course-detail">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Concluído</span>
+                                </div>
+                            </div>
+                            <div class="course-note">
+                                <i class="fas fa-star"></i>
+                                Nota final: 92
+                            </div>
+                            <a href="img/cursos/2024 - 30h - Conceitos essenciais sobre Patologias em Estruturas de Concreto.pdf" class="course-link" target="_blank">
+                                <i class="fas fa-certificate"></i> Ver Certificado
+                            </a>
+                        </div>
+                        
+                        <div class="course-item">
+                            <h4 class="course-title">Introdução à orçamentação de obras rodoviárias</h4>
+                            <span class="course-hours">40h</span>
+                            <div class="course-details">
+                                <div class="course-detail">
+                                    <i class="fas fa-university"></i>
+                                    <span>ENAP</span>
+                                </div>
+                                <div class="course-detail">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Fev-Abr 2025</span>
+                                </div>
+                                <div class="course-detail">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Concluído</span>
+                                </div>
+                            </div>
+                            <div class="course-note">
+                                <i class="fas fa-star"></i>
+                                Nota final: 82
+                            </div>
+                            <a href="img/cursos/2025 - 40h - Introdução à orçamentação de obras rodoviárias.pdf" class="course-link" target="_blank">
+                                <i class="fas fa-certificate"></i> Ver Certificado
+                            </a>
+                        </div>
+                        
+                        <div class="course-item">
+                            <h4 class="course-title">Introdução ao Excel</h4>
+                            <span class="course-hours">25h</span>
+                            <div class="course-details">
+                                <div class="course-detail">
+                                    <i class="fas fa-university"></i>
+                                    <span>ENAP</span>
+                                </div>
+                                <div class="course-detail">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Nov 2025</span>
+                                </div>
+                                <div class="course-detail">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Concluído</span>
+                                </div>
+                            </div>
+                            <div class="course-note">
+                                <i class="fas fa-star"></i>
+                                Nota final: 70.83
+                            </div>
+                            <a href="img/cursos/2025 - 25h - Introdução ao Excel.pdf" class="course-link" target="_blank">
+                                <i class="fas fa-certificate"></i> Ver Certificado
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects-section" id="projetos">
+        <div class="container">
+            <h2 class="section-title">Projetos</h2>            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="autocad">AutoCAD</button>
+                <button class="filter-btn" data-filter="elpla">ELPLA</button>
+                <button class="filter-btn" data-filter="revit">Revit</button>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- projetos serão carregados dinamicamente -->
+            </div>
+        </div>
+    </section>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Projeto</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div id="modal-description" class="modal-project-description"></div>
+            <div class="files-list" id="modal-files"></div>
+        </div>
+    </div>
+
+    <footer id="contato">
+        <div class="container footer-content">
+            <h2>Entre em Contato</h2>
+            <div class="contact-info" style="max-width: 500px; margin: 1.5rem auto;">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>(84) 98145-7513</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>amandacscampos@outlook.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Natal-RN</span>
+                </div>
+            </div>
+          <div class="social-links">
+    <a href="https://www.linkedin.com/in/amanda-campos-81a87429b/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+    <a href="https://wa.me/5584981457513?text=Olá!%20Vim%20pelo%20seu%20portfólio%20online." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+    <a href="mailto:amandacscampos@outlook.com"><i class="fas fa-envelope"></i></a>
+</div>
+            <button class="print-btn" onclick="window.print()">
+                <i class="fas fa-print"></i> Imprimir Currículo
+            </button>
+            <p style="margin-top: 2rem; font-size: 0.9rem;">&copy; 2023 Amanda Campos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/profile.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/experience.js"></script>
+    <script src="assets/js/projects-data.js"></script>
+    <script src="assets/js/projects.js"></script>
+</body>
+</html>
