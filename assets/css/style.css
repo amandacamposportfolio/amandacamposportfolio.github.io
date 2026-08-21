@@ -1027,3 +1027,14 @@ footer {
         box-shadow: none !important;
     }
 }
+
+
+.experience-item[data-experience] {
+    transition: background-color 0.2s, box-shadow 0.2s;
+    border-radius: 8px;
+    padding: 1rem;
+}
+.experience-item[data-experience]:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
