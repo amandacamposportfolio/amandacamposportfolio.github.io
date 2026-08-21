@@ -63,39 +63,62 @@ function openEstagioModal() {
     modalTitle.textContent = 'Estágio em Engenharia Civil - Linhares & Rebouças';
     modalDescription.innerHTML = `
         <h3>Visão Geral</h3>
-        <p style="text-align: justify; line-height: 1.6;">
-            Atuo como estagiária na <strong>Linhares & Rebouças</strong>, uma empresa de engenharia 
-            com forte atuação em projetos complementares e gestão de obras no Rio Grande do Norte. 
-            Minhas atividades são focadas no desenvolvimento de projetos e na compatibilização em 
-            <strong>BIM (Building Information Modeling)</strong>.
-        </p>
-        <h3>Principais Atividades</h3>
-        <ul style="list-style: none; padding-left: 0; margin: 1rem 0;">
-            <li style="margin-bottom: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: var(--primary-blue); margin-right: 0.5rem;"></i>
-                <strong>Modelagem BIM:</strong> Criação de modelos no Revit, compatibilização entre disciplinas.
-            </li>
-            <li style="margin-bottom: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: var(--primary-blue); margin-right: 0.5rem;"></i>
-                <strong>Projetos Complementares:</strong> Hidrossanitário, elétrico, prevenção contra incêndio.
-            </li>
-            <li style="margin-bottom: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: var(--primary-blue); margin-right: 0.5rem;"></i>
-                <strong>Apresentação a Clientes:</strong> Pranchas, perspectivas e relatórios utilizando AutoCAD e Revit.
-            </li>
-        </ul>
-     <h3>Ferramentas</h3>
-<div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0;">
 
-<span class="skill-tag">AutoCAD</span>
-<span class="skill-tag">Revit</span>
-<span class="skill-tag">Excel</span>
-<span class="skill-tag">Word</span>
+    <p>
+        Atuo como estagiária na <strong>Linhares & Rebouças</strong>, empresa de engenharia
+        especializada no desenvolvimento de projetos complementares. Minhas atividades
+        envolvem a elaboração, modelagem, detalhamento e compatibilização de projetos
+        de instalações prediais, utilizando principalmente AutoCAD e Revit.
+    </p>
+
+    <h3>Principais Atividades</h3>
+
+    <p>
+        <strong>Projetos Hidrossanitários:</strong>
+        desenvolvimento de sistemas de água fria, água quente, esgotamento sanitário
+        e drenagem pluvial, incluindo dimensionamento, detalhamento, isométricos
+        e levantamento de quantitativos.
+    </p>
+
+    <p>
+        <strong>Projetos Elétricos:</strong>
+        definição de pontos elétricos, circuitos, eletrodutos, quadros de distribuição,
+        levantamento de cargas, dimensionamento e elaboração de quadros de cargas.
+    </p>
+
+    <p>
+        <strong>SPDA:</strong>
+        desenvolvimento e detalhamento de projetos de Sistemas de Proteção contra
+        Descargas Atmosféricas.
+    </p>
+
+    <p>
+        <strong>Instalações de Gás:</strong>
+        desenvolvimento e detalhamento de projetos de instalações de gás.
+    </p>
+
+    <p>
+        <strong>Modelagem e Compatibilização BIM:</strong>
+        modelagem tridimensional das instalações e análise de interferências entre
+        arquitetura, estrutura e projetos complementares.
+    </p>
+
+    <p>
+        <strong>Documentação Técnica:</strong>
+        elaboração de pranchas executivas, detalhamentos, quantitativos,
+        listas de materiais e documentação para entrega ao cliente.
+    </p>
+
+    <h3>Ferramentas</h3>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0;">
+        <span class="skill-tag">AutoCAD</span>
+        <span class="skill-tag">Revit</span>
+        <span class="skill-tag">Excel</span>
+        <span class="skill-tag">Word</span>
+    </div>
 
 </div>
-        <p style="font-style: italic; color: var(--medium-blue);">
-            “O estágio tem sido uma oportunidade única de aplicar conhecimentos teóricos na prática.”
-        </p>
     `;
 
     modal.style.display = 'block';
