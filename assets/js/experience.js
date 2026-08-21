@@ -111,8 +111,11 @@ function openEstagioModal() {
     <h3>Ferramentas</h3>
 
     <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0;">
-        <span class="skill-tag">AutoCAD</span>
-        <span class="skill-tag">Revit</span>
+      <span class="skill-tag">Revit</span>
+        <span class="skill-tag">Projetos Complementares</span>
+        <span class="skill-tag">BIM</span>
+        <span class="skill-tag">Modelagem</span>
+        <span class="skill-tag">Compatibilização</span>
         <span class="skill-tag">Excel</span>
         <span class="skill-tag">Word</span>
     </div>
