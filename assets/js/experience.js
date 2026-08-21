@@ -73,40 +73,40 @@ function openEstagioModal() {
 
     <h3>Principais Atividades</h3>
 
-    <p>
-        <strong>Projetos Hidrossanitários:</strong>
-        desenvolvimento de sistemas de água fria, água quente, esgotamento sanitário
-        e drenagem pluvial, incluindo dimensionamento, detalhamento, isométricos
-        e levantamento de quantitativos.
-    </p>
+<p style="margin-bottom: 1rem;">
+    <strong>Projetos Hidrossanitários:</strong>
+    desenvolvimento de sistemas de água fria, água quente, esgotamento sanitário
+    e drenagem pluvial, incluindo dimensionamento, detalhamento, isométricos
+    e levantamento de quantitativos.
+</p>
 
-    <p>
-        <strong>Projetos Elétricos:</strong>
-        definição de pontos elétricos, circuitos, eletrodutos, quadros de distribuição,
-        levantamento de cargas, dimensionamento e elaboração de quadros de cargas.
-    </p>
+<p style="margin-bottom: 1rem;">
+    <strong>Projetos Elétricos:</strong>
+    definição de pontos elétricos, circuitos, eletrodutos, quadros de distribuição,
+    levantamento de cargas, dimensionamento e elaboração de quadros de cargas.
+</p>
 
- <p>
+<p style="margin-bottom: 1rem;">
     <strong>PCI:</strong>
     desenvolvimento e detalhamento de projetos de prevenção e combate a incêndio.
 </p>
 
-    <p>
-        <strong>Instalações de Gás:</strong>
-        desenvolvimento e detalhamento de projetos de instalações de gás.
-    </p>
+<p style="margin-bottom: 1rem;">
+    <strong>Instalações de Gás:</strong>
+    desenvolvimento e detalhamento de projetos de instalações de gás.
+</p>
 
-    <p>
-        <strong>Modelagem e Compatibilização BIM:</strong>
-        modelagem tridimensional das instalações e análise de interferências entre
-        arquitetura, estrutura e projetos complementares.
-    </p>
+<p style="margin-bottom: 1rem;">
+    <strong>Modelagem e Compatibilização BIM:</strong>
+    modelagem tridimensional das instalações e análise de interferências entre
+    arquitetura, estrutura e projetos complementares.
+</p>
 
-    <p>
-        <strong>Documentação Técnica:</strong>
-        elaboração de pranchas executivas, detalhamentos, quantitativos,
-        listas de materiais e documentação para entrega ao cliente.
-    </p>
+<p style="margin-bottom: 1rem;">
+    <strong>Documentação Técnica:</strong>
+    elaboração de pranchas executivas, detalhamentos, quantitativos,
+    listas de materiais e documentação para entrega ao cliente.
+</p>
 
     <h3>Ferramentas</h3>
 
