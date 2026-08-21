@@ -97,13 +97,7 @@ function openEstagioModal() {
             “O estágio tem sido uma oportunidade única de aplicar conhecimentos teóricos na prática.”
         </p>
     `;
-    modalFiles.innerHTML = `
-        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee;">
-            <a href="#projetos" style="background: var(--light-blue); padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; color: var(--primary-blue);">
-                <i class="fas fa-folder-open"></i> Ver Projetos Relacionados
-            </a>
-        </div>
-    `;
+
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
 }
