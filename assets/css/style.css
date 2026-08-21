@@ -1054,3 +1054,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+.experience-details p {
+    text-align: justify;
+}
