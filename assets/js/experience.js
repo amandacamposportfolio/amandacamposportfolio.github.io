@@ -65,10 +65,10 @@ function openEstagioModal() {
         <h3>Visão Geral</h3>
 
     <p>
-        Atuo como estagiária na <strong>Linhares & Rebouças</strong>, empresa de engenharia
-        especializada no desenvolvimento de projetos complementares. Minhas atividades
-        envolvem a elaboração, modelagem, detalhamento e compatibilização de projetos
-        de instalações prediais, utilizando principalmente AutoCAD e Revit.
+           Atuo no desenvolvimento de projetos complementares e na compatibilização em BIM,
+    utilizando AutoCAD e Revit para modelagem, detalhamento e elaboração de documentação
+    técnica. Desenvolvo projetos de instalações elétricas, hidrossanitárias, drenagem pluvial,
+    PCI e gás para empreendimentos residenciais de diferentes portes.
     </p>
 
     <h3>Principais Atividades</h3>
@@ -86,11 +86,10 @@ function openEstagioModal() {
         levantamento de cargas, dimensionamento e elaboração de quadros de cargas.
     </p>
 
-    <p>
-        <strong>SPDA:</strong>
-        desenvolvimento e detalhamento de projetos de Sistemas de Proteção contra
-        Descargas Atmosféricas.
-    </p>
+ <p>
+    <strong>PCI:</strong>
+    desenvolvimento e detalhamento de projetos de prevenção e combate a incêndio.
+</p>
 
     <p>
         <strong>Instalações de Gás:</strong>
