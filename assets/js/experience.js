@@ -84,15 +84,15 @@ function openEstagioModal() {
                 <strong>Apresentação a Clientes:</strong> Pranchas, perspectivas e relatórios utilizando AutoCAD e Revit.
             </li>
         </ul>
-        <h3>Ferramentas</h3>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0;">
-            <span class="skill-tag">AutoCAD</span>
-            <span class="skill-tag">Revit</span>
-            <span class="skill-tag">Civil 3D</span>
-            <span class="skill-tag">BIM 360</span>
-            <span class="skill-tag">Navisworks</span>
-            <span class="skill-tag">Excel</span>
-        </div>
+     <h3>Ferramentas</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0;">
+
+<span class="skill-tag">AutoCAD</span>
+<span class="skill-tag">Revit</span>
+<span class="skill-tag">Excel</span>
+<span class="skill-tag">Word</span>
+
+</div>
         <p style="font-style: italic; color: var(--medium-blue);">
             “O estágio tem sido uma oportunidade única de aplicar conhecimentos teóricos na prática.”
         </p>
